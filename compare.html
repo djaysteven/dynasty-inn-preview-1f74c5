@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-title-key="cmp.title">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("pattaya-demo-theme");
+        if (t !== "light" && t !== "dark") t = "dark";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.style.colorScheme = "dark";
+      }
+    })();
+  </script>
+  <style>
+    html { background: #12100e; color-scheme: dark; }
+    html[data-theme="light"] { background: #f3eee6; color-scheme: light; }
+  </style>
+  <meta name="color-scheme" content="dark light" />
+  <title>Dynasty Inn — the live page and this demo</title>
+  <meta name="description" content="The unfinished BaseKit page for Dynasty Inn Pattaya, beside a quiet nameplate demo that keeps only the published photograph, note, email, and address." />
+  <link rel="icon" href="images/mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="themeLive" class="sr-only" aria-live="polite"></div>
+  <header class="compare-top">
+    <h1 data-i18n="cmp.h1">Dynasty Inn — live page and this demo</h1>
+    <div class="compare-nav">
+      <div class="theme-switch theme-switch--header" role="group" data-i18n-aria="theme.appearance" aria-label="Appearance">
+        <button type="button" class="theme-btn" data-theme-set="dark" aria-pressed="true" data-i18n-aria="theme.dark" aria-label="Dark">
+          <svg class="theme-btn__icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+        </button>
+        <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="false" data-i18n-aria="theme.light" aria-label="Light">
+          <svg class="theme-btn__icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+      <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="th" aria-pressed="false" title="ไทย"><span class="flag" aria-hidden="true">🇹🇭</span><span class="lang-code">TH</span></button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true" title="English"><span class="flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span></button>
+      </div>
+      <a class="btn btn-quiet" href="index.html" data-i18n="cmp.openDemo">Open the demo</a>
+      <a class="btn btn-mail" href="https://dynastyinnpattaya.com/" target="_blank" rel="noopener noreferrer" data-i18n="cmp.openLive">Open the live site</a>
+    </div>
+  </header>
+
+  <div class="compare-intro">
+    <p data-i18n="cmp.intro">The live site is an unfinished BaseKit page. It already carries the inn’s name, one property photograph, a short note, an email, and a Beach Road address. A few template placeholders are still on the page. This demo keeps what was published and leaves out what was never written.</p>
+  </div>
+
+  <div class="split">
+    <section class="panel">
+      <div class="panel-head">
+        <h2 data-i18n="cmp.liveH">Live site</h2>
+        <span class="tag" data-i18n="cmp.liveTag">As published</span>
+      </div>
+      <div class="frame-wrap">
+        <iframe title="Live Dynasty Inn Pattaya" src="https://dynastyinnpattaya.com/" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="fallback">
+        <p data-i18n="cmp.fallback">If the frame does not load, open the page in a new tab.</p>
+        <a class="btn btn-quiet" href="https://dynastyinnpattaya.com/" target="_blank" rel="noopener noreferrer" data-i18n="cmp.openLive">Open the live site</a>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="panel-head">
+        <h2 data-i18n="cmp.demoH">This demo</h2>
+        <span class="tag" data-i18n="cmp.demoTag">di monogram</span>
+      </div>
+      <div class="frame-wrap">
+        <iframe title="Dynasty Inn nameplate demo" src="index.html" loading="lazy"></iframe>
+      </div>
+      <div class="fallback">
+        <a class="btn btn-quiet" href="index.html" data-i18n="cmp.openDemo">Open the demo</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="checklist">
+    <article class="card">
+      <h3 data-i18n="cmp.keptH">What is already there</h3>
+      <ul>
+        <li data-i18n="cmp.kept1">The name Dynasty Inn Hotel, Pattaya.</li>
+        <li data-i18n="cmp.kept2">One property photograph, used as the feature background.</li>
+        <li data-i18n="cmp.kept3">The line “Currently Open!”</li>
+        <li data-i18n="cmp.kept4">A short note about Pattaya Beach, reopening, and a special rate — with no rate figure.</li>
+        <li data-i18n="cmp.kept5">Email didowntown@yahoo.com and a mail button.</li>
+        <li data-i18n="cmp.kept6">Address 596/16 Soi 13, Pattaya Beach Road, Pattaya 20150.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3 data-i18n="cmp.leftH">What the template still shows</h3>
+      <ul>
+        <li data-i18n="cmp.left1">The placeholder line “My strapline goes here”.</li>
+        <li data-i18n="cmp.left2">A button that still reads “Lorem Ipsum”.</li>
+        <li data-i18n="cmp.left3">The Francesca template’s stock feature image, as well as the real photograph.</li>
+        <li data-i18n="cmp.left4">The BaseKit logo field is empty. The property photograph still carries the burgundy di monogram. No phone number is on the rendered page.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3 data-i18n="cmp.demoListH">What this demo does</h3>
+      <ul>
+        <li data-i18n="cmp.demo1">Shows that same photograph once, in a frame, with a light retouch only.</li>
+        <li data-i18n="cmp.demo2">Uses the published di monogram — the same burgundy circle and white letters — in the header and the favicon, with the name beside it.</li>
+        <li data-i18n="cmp.demo3">Keeps the note, the open line, the email, and the address — in English and Thai.</li>
+        <li data-i18n="cmp.demo4">Drops the placeholder strapline, the lorem button, and the stock background.</li>
+        <li data-i18n="cmp.demo5">Does not add rooms, prices, amenities, testimonials, or a booking form.</li>
+      </ul>
+    </article>
+  </div>
+
+  <footer class="vantage-footer">
+    <div class="container vantage-inner">
+      <img src="images/vantage.png" alt="Vantage" width="520" height="180" />
+      <p class="demo-note" data-i18n="cmp.foot">Demo by Vantage. The inn’s words and photograph stay theirs.</p>
+      <a class="footer-link" href="index.html" data-i18n="cmp.openDemo">Open the demo</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
